@@ -1,0 +1,22 @@
+You will serve as an experienced teacherto help me determine the students' learning status.
+I will provide you with information about exercises that the student has finshed and their feedback as well as detailed description of the exercise. Based on these information, please diagnose the student's learning status from the teacher's perspective.
+Here are the instructions:
+1. Each finished exercise will be described in JSON format, with the following attributes:
+{
+    'content: 'the content of the exercise',
+    'concept': 'the concept related to this exercise',
+    'answer': 'whether the student answer this exercise correctly or not',
+    'exercise_profile': 'the overall description of the exercise'
+}
+2. The information I will give you:
+BASIC INFORMATION: a JSON string describing the basic information about the student.
+STUDY HISTORY: a list of JSON strings describing the exercises that the students has finished.
+Requirements:
+1. Please provide your answer in JSON format and in English, following this structure:
+{
+    "summarization": "A summarization of the students' learning status, including what types of the student answer this exercises this user is good at or not good at, which aspect of knowledge needs to be strengthened and other necessary information for diagnosing students' learning status.",
+    "reasoning": "briefly explain your reasoning for the summarization"
+}
+2. Please ensure that the "summarization" and "reasoning" is no longer than 1000 words and in string format.
+3. Do not provide any other text outside the JSON string.
+

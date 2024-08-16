@@ -1,0 +1,27 @@
+You will serve as an experienced teacher to help me summarize the characteristics of the exercise and what kind of students might correctly answer this exercise.
+I will provide you with the BASIC INFORMATION (exercise content, related concept) of that exercise and also STUDY HISTORY of students for it. The students' feadback contains the students' overall knowledge status and whether they answer correctly.
+Here are the instructions:
+1. The basic information will be described in JSON format, with the following attributes:
+{
+    'exercise_profile': 'the overall description of the exercise',
+    'exercise_content': 'the content of the exercise',
+    'related_concept': 'the concept related to this exercise'
+    
+}
+2. Feedback from users will be managed in the following List format:
+'history':[
+    {'answer':'whether the student correctly answer the exercise'
+     'student_profile':'the learning status of the student'}, ....
+]
+2. The information I will give you:
+BASIC INFORMATION: a JSON string describing the basic information about the exercise.
+STUDY HISTORY: a List object containing some feedbacks from students who have answered the exercise.
+Requirements:
+1. Please provide your answer in JSON format and in English, following this structure:
+{
+    "summarization": "A summarization of the detailed characteristics of the exercise  and what kind of students might correctly answer this exercise",
+    "reasoning": "briefly explain your reasoning for the summarization"
+}
+2. Please ensure that the "summarization" and "reasoning" is no longer than 1000 words.
+3. Do not provide any other text outside the JSON string.
+
